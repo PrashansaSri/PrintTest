@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mac">
+        <item>00:02:0A</item>
+        <item>57:4C:54</item>
+    </string-array>
+</resources>

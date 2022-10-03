@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:background="@android:color/background_light">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/arrow_carrot_right_24"
+        android:id="@+id/lvitem_image_end"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="5dp"
+        tools:ignore="ContentDescription,RtlHardcoded,RtlSymmetry"
+        android:contentDescription="" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/printer24"
+        android:id="@+id/lvitem_image_first"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        tools:ignore="ContentDescription,RtlHardcoded,RtlSymmetry"
+        android:contentDescription="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvitem_textview"
+        android:layout_toRightOf="@+id/lvitem_image_first"
+        android:layout_toEndOf="@+id/lvitem_image_first"
+        android:layout_centerInParent="true"
+        android:textColor="?attr/editTextColor"
+        android:textSize="14sp"
+        android:paddingLeft="10dp"
+        tools:ignore="RelativeOverlap,RtlHardcoded,RtlSymmetry" />
+</RelativeLayout>

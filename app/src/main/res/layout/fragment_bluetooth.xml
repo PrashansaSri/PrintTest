@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/background_light"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/black"
+        android:layout_gravity="top"></LinearLayout>
+
+    <TextView
+        android:text="@string/on_off"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/textView"
+        android:background="?attr/colorButtonNormal"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch_bluetooth"
+            android:text="@string/bluetooth"
+            android:textSize="16sp"
+            android:paddingLeft="20dp"
+            android:switchMinWidth="60dp"
+            android:minHeight="50dp"
+            android:gravity="center_vertical"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+    </LinearLayout>
+
+    <TextView
+        android:text="@string/paired"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/paired_tv"
+        android:gravity="center_vertical"
+        android:background="?attr/colorButtonNormal"
+        android:paddingLeft="20dp"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/paired_lv"
+        android:background="@android:color/background_light" />
+
+    <TextView
+        android:text="Available equipment"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/new_tv"
+        android:gravity="center_vertical"
+        android:background="?attr/colorButtonNormal"
+        android:paddingLeft="20dp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/new_lv"
+        android:background="@android:color/background_light" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="@string/search_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_btn"
+            android:textSize="10sp"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:gravity="center_horizontal"
+            android:background="@drawable/click_selector"
+            android:layout_weight="1"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            tools:ignore="ButtonStyle,SmallSp" />
+        <Button
+            android:text="@string/scan_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scan_btn"
+            android:textSize="10sp"
+            android:drawableTop="@android:drawable/ic_menu_camera"
+            android:gravity="center_horizontal"
+            android:background="@drawable/click_selector"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:visibility="gone"
+            tools:ignore="ButtonStyle,SmallSp" />
+
+    </LinearLayout>
+
+</LinearLayout>

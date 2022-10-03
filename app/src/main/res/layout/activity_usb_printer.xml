@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_usb_printer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UsbPrinterActivity"
+    android:background="@android:color/background_light">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/usb_tb"
+        android:layout_alignParentTop="true"
+        app:navigationIcon="@drawable/arrow_left"
+        android:background="@android:color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textSize="16sp"
+            android:id="@+id/title_tb_tv"
+            android:text="@string/jxit_usb_printer" />
+
+        <ImageButton
+            android:id="@+id/right_tb_imgbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/usb1_32"
+            android:clickable="false"
+            android:contentDescription=""
+            android:textStyle="bold"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/background_dark"
+        android:layout_below="@+id/usb_tb"
+        android:id="@+id/dvi_llay" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usb_tb"
+        android:id="@+id/lv_llay">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/demo_lv" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/log_tv"
+        android:layout_below="@+id/lv_llay"
+        android:scrollbars="vertical"
+        android:textSize="10sp"
+        tools:ignore="SmallSp" />
+
+
+</RelativeLayout>

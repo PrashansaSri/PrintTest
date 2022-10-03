@@ -1,0 +1,490 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragmentConfig"
+    android:id="@+id/rlayout_read_info"
+    android:orientation="vertical"
+    android:background="@android:color/background_light">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:elevation="0dp"
+        android:background="@android:color/black">
+
+    </LinearLayout>
+
+    <!--<TextView-->
+        <!--android:text="参数设置"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="18sp"-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:textColor="@android:color/holo_blue_dark" />-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1px"-->
+        <!--android:elevation="0dp"-->
+        <!--android:background="@android:color/black">-->
+
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:divider="@android:color/black">
+
+        <TextView
+            android:text="Bluetooth name      ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_bt_name"
+            android:textSize="14sp"
+            android:textColor="?attr/actionMenuTextColor"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:text="Pairing password   ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_bt_pin"
+            android:textSize="14sp"
+            android:textColor="?attr/actionMenuTextColor"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/tv_bt_name"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignLeft="@+id/tv_bt_name" />
+
+        <TextView
+            android:text="Equipment Identity ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_device_identification"
+            android:textSize="14sp"
+            android:textColor="?attr/actionMenuTextColor"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/tv_bt_pin"
+            android:visibility="visible"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignLeft="@+id/tv_bt_pin" />
+
+        <TextView
+            android:text="Bluetooth address  ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_bt_mac"
+            android:textColor="?attr/actionMenuTextColor"
+            android:visibility="visible"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignLeft="@+id/tv_device_identification"
+            android:layout_below="@+id/tv_device_identification" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_bt_name"
+            android:background="@drawable/edittext_shape"
+            android:layout_alignTop="@+id/tv_bt_name"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_alignBottom="@+id/tv_bt_name"
+            android:maxLines="1"
+            android:layout_marginRight="10dp"
+            tools:ignore="LabelFor,RtlHardcoded"
+            android:text="X30"
+            android:layout_toRightOf="@+id/tv_bt_name" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_bt_pin"
+            android:background="@drawable/edittext_shape"
+            android:layout_alignTop="@+id/tv_bt_pin"
+            android:layout_toRightOf="@+id/tv_bt_pin"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:layout_alignLeft="@+id/et_bt_mac"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:layout_alignRight="@+id/et_bt_name"
+            tools:ignore="LabelFor,RtlHardcoded"
+            android:inputType="number"
+            android:text="0000"
+            android:layout_alignBottom="@+id/tv_bt_pin" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_device_identification"
+            android:spinnerMode="dialog"
+            android:layout_below="@+id/et_bt_pin"
+            android:layout_alignBottom="@+id/tv_device_identification"
+            android:layout_alignTop="@+id/tv_device_identification"
+            tools:ignore="RtlHardcoded,UnusedAttribute"
+            android:layout_toRightOf="@+id/tv_device_identification" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/et_bt_mac"
+            android:background="@drawable/edittext_shape"
+            android:layout_toRightOf="@+id/tv_bt_mac"
+            android:layout_alignBottom="@+id/tv_bt_mac"
+            android:layout_alignTop="@+id/tv_bt_mac"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="visible"
+            android:inputType=""
+            android:padding="5dp"
+            tools:ignore="LabelFor,RtlHardcoded,TextFields"
+            android:clickable="false" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@android:color/black" />
+
+    <CheckBox
+        android:text="WiFi parameters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_wifi_parameter"
+        tools:ignore="RtlHardcoded"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/rl_wifi_param"
+        android:visibility="invisible">
+
+        <TextView
+            android:text="WiFi name             ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_wifi_name"
+            android:textSize="14sp"
+            android:textColor="?attr/actionMenuTextColor"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:text="WiFi password     ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_wifi_password"
+            android:textSize="14sp"
+            android:textColor="?attr/actionMenuTextColor"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignLeft="@+id/tv_wifi_name"
+            android:layout_below="@+id/tv_wifi_name" />
+
+        <TextView
+            android:text="Encryption             ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_wifi_encryption"
+            android:textSize="14sp"
+            android:textColor="?attr/actionMenuTextColor"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/tv_wifi_password"
+            android:layout_alignLeft="@+id/tv_wifi_name" />
+
+        <TextView
+            android:text="The port number  ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_wifi_port"
+            android:textColor="?attr/actionMenuTextColor"
+            android:visibility="visible"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/tv_wifi_encryption"
+            android:layout_alignLeft="@+id/tv_wifi_encryption" />
+
+        <TextView
+            android:text="WiFi address         ："
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/tv_wifi_mac"
+            android:textColor="?attr/actionMenuTextColor"
+            android:visibility="visible"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignLeft="@+id/tv_wifi_password"
+            android:layout_below="@+id/tv_wifi_port" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_name"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:maxLength="16"
+            android:maxLines="1"
+            tools:ignore="LabelFor,RtlHardcoded"
+            android:text="X30"
+            android:layout_toRightOf="@+id/tv_wifi_name"
+            android:layout_alignTop="@+id/tv_wifi_name" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_password"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:maxLength="12"
+            android:maxLines="1"
+            tools:ignore="LabelFor,RtlHardcoded"
+            android:inputType="number"
+            android:text="0000"
+            android:layout_alignTop="@+id/tv_wifi_password"
+            android:layout_toRightOf="@+id/tv_wifi_password"
+            android:layout_alignRight="@+id/et_wifi_name" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_wifi_encryption"
+            android:spinnerMode="dialog"
+            tools:ignore="RtlHardcoded,UnusedAttribute"
+            android:layout_alignTop="@+id/tv_wifi_encryption"
+            android:layout_toRightOf="@+id/tv_wifi_encryption" />
+
+        <EditText
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_port"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="visible"
+            android:inputType=""
+            android:padding="5dp"
+            tools:ignore="LabelFor,RtlHardcoded,TextFields"
+            android:layout_toRightOf="@+id/tv_wifi_port"
+            android:layout_alignTop="@+id/tv_wifi_port"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@+id/tv_wifi_port"
+            android:layout_alignLeft="@+id/et_wifi_password"
+            android:text="9100" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_mac"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="visible"
+            android:inputType=""
+            android:padding="5dp"
+            tools:ignore="LabelFor,RtlHardcoded,TextFields"
+            android:layout_alignTop="@+id/tv_wifi_mac"
+            android:layout_toRightOf="@+id/tv_wifi_mac"
+            android:layout_alignRight="@+id/et_wifi_name"
+            android:layout_alignLeft="@+id/et_wifi_port"
+            android:clickable="false" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_wifi_mac"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black"
+        android:id="@+id/ll_cut"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/rl_static_ip"
+        android:visibility="visible">
+
+        <CheckBox
+            android:text="Static IP        ："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_wifi_static_ip"
+            tools:ignore="RtlHardcoded"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:text="Gateway        ："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_wifi_gateway"
+            tools:ignore="RtlHardcoded"
+            android:layout_below="@+id/cb_wifi_static_ip"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:text="Subnet mask："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_wifi_subnet_mask"
+            tools:ignore="RtlHardcoded"
+            android:layout_below="@+id/cb_wifi_gateway"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:text="DNS                 ："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb_wifi_DNS"
+            tools:ignore="RtlHardcoded"
+            android:layout_below="@+id/cb_wifi_subnet_mask"
+            android:visibility="invisible" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_static_ip"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="invisible"
+            android:inputType=""
+            android:padding="5dp"
+            tools:ignore="LabelFor,RtlHardcoded,TextFields"
+            android:layout_alignTop="@+id/cb_wifi_static_ip"
+            android:layout_toRightOf="@+id/cb_wifi_static_ip"
+            android:layout_alignLeft="@+id/et_wifi_subnet_mask"
+            android:text="255.255.255.255" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_gateway"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="invisible"
+            android:inputType=""
+            android:padding="5dp"
+            tools:ignore="LabelFor,RtlHardcoded,TextFields"
+            android:layout_alignTop="@+id/cb_wifi_gateway"
+            android:layout_toRightOf="@+id/cb_wifi_gateway"
+            android:layout_alignLeft="@+id/et_wifi_subnet_mask"
+            android:text="192.168.1.1" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_subnet_mask"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="invisible"
+            android:inputType=""
+            android:padding="5dp"
+            tools:ignore="LabelFor,RtlHardcoded,TextFields"
+            android:layout_alignTop="@+id/cb_wifi_subnet_mask"
+            android:layout_toRightOf="@+id/cb_wifi_subnet_mask"
+            android:text="255.255.255.0" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:ems="10"
+            android:id="@+id/et_wifi_DNS"
+            android:background="@drawable/edittext_shape"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:visibility="invisible"
+            android:inputType=""
+            android:padding="5dp"
+            tools:ignore="LabelFor,RtlHardcoded,TextFields"
+            android:layout_alignTop="@+id/cb_wifi_DNS"
+            android:layout_toRightOf="@+id/cb_wifi_DNS"
+            android:text="208.67.222.222"
+            android:layout_alignLeft="@+id/et_wifi_subnet_mask" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:text="Read"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/btn_read"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/click_selector"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:text="Write"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/btn_config"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/click_selector"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

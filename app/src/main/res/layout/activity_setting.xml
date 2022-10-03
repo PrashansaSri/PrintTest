@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingActivity"
+    android:elevation="0dp"
+    android:background="@android:color/background_light"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/settingbar"
+        app:navigationIcon="@drawable/arrow_left"
+        android:background="@color/orange_normal">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:text="@string/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingbar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/shuaxin"
+        android:textSize="18sp"
+        android:textColor="?attr/actionMenuTextColor"
+        android:gravity="center_vertical|start"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        tools:ignore="RtlSymmetry"
+        android:paddingLeft="20dp" />
+
+    <Switch
+        android:text="@string/off_line_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shuaxin"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/lixian"
+        android:textColor="?attr/actionMenuTextColor"
+        android:textSize="18sp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:checked="true"
+        android:paddingRight="20dp"
+        tools:ignore="RtlHardcoded"
+        android:paddingLeft="20dp" />
+
+    <TextView
+        android:text="@string/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lixian"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gengxin"
+        android:textColor="?attr/actionMenuTextColor"
+        android:textSize="18sp"
+        android:gravity="center_vertical|start"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        tools:ignore="RtlSymmetry"
+        android:paddingLeft="20dp" />
+</RelativeLayout>
